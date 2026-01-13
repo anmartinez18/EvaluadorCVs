@@ -55,7 +55,6 @@ def evaluate_cv(cv_file, oferta_file, cv_text, oferta_text):
             gr.update(visible=True),
             gr.update(visible=False)
         ]
-    
     elif resultado["not_found_requirements"]:
         return[
             json.dumps(resultado, indent=4, ensure_ascii=False),
@@ -65,7 +64,6 @@ def evaluate_cv(cv_file, oferta_file, cv_text, oferta_text):
             gr.update(visible=True),
             gr.update(visible=True),
             gr.update(visible=False),
-            gr.update(visible=True),
             gr.update(visible=False)
         ]
     else:

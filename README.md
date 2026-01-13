@@ -1,4 +1,4 @@
-# Evaluador de CVs con IA Generativa
+# 🔍 Evaluador de CVs con IA Generativa 🧠
 
 Este sistema implementa un pipeline basado en modelos llm para la evaluación de candidatos automáticamente según los requisitos de una oferta de empleo. La evaluación se realiza en dos fases:
 
@@ -6,14 +6,14 @@ Este sistema implementa un pipeline basado en modelos llm para la evaluación de
 
 2. **Evaluación interactiva**: Si el candidato no ha sido descartado y existen requisitos no mencionados en el CV ("not_found_requirements"), que no sean obligatorios, el sistema realizará una breve entrevista al candidato y actualizará el resultado final en base a las respuestas proporcionadas. En caso contrario se finalizará la evaluación.
 
-## Funcionalidades destacables
+## Funcionalidades principales
 - Extracción automática de requisitos.
 - Búsqueda y análisis de evidencias en el CV para contrastar el cumplimiento de los requisitos.
 - Puntuación basada en el cumplimiento de requisitos. Si un requisito no se cumple se descarta al candidato automáticamente.
 - Conversación interactiva con el candidato para completar el proceso.
 - Sistema modular, permite cambiar el provedor del LLM de manera sencilla.
 
-## Configurar LLM
+## Configurar LLM ✅
 
 Para el desarrollo del sistema se ha utilizado un LLM de Mistral, concretamente el modelo llamado "mistral-large-latest".
 

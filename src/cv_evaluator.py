@@ -37,20 +37,20 @@ Oferta de empleo:
 Reglas importantes:
 1. Considera únicamente lo escrito en la oferta.
 2. Extrae únicamente requisitos técnicos o analíticos.
-2. Trata los requisitos conectados con "y" o "," como requisitos individuales.
+3. Trata los requisitos conectados con "y" o "," como requisitos individuales.
     Ejemplos:
         - "Experiencia en Python y Java" : ["Experiencia en Python", "Experiencia en Java"]
         - "Conocimientos en React, Vue, Angular" : ["Conocimientos en React", "Conocimientos en Vue", "Conocimientos en Angular"]
 
-3. Trata los requisitos conectados con "o" como un único requisito.
+4. Trata los requisitos conectados con "o" como un único requisito.
      Ejemplos:
         - "Experiencia en Python o Java" : ['Experiencia en Python o Java']
         - "Formación en Ciencia de datos o Matemáticas" : ['Formación en Ciencia de datos o Matemáticas']
         
-4. Divide los requisitos en obligatorios y opcionales según la oferta.
-5. Los requisitos obligatorios deben estar indicados en la oferta de manera clara.
-6. No asumas requisitos no mencionados explícitamente.
-7. Una vez extraido cada requisito simplifica su descripción para añadirle un tono más natural.
+5. Divide los requisitos en obligatorios y opcionales según la oferta.
+6. Los requisitos obligatorios deben estar indicados en la oferta de manera clara.
+7. No asumas requisitos no mencionados explícitamente.
+8. Una vez extraido cada requisito simplifica su descripción para añadirle un tono más natural.
     Ejemplos:
         - "Experiencia obligatoria de 2 años en HTML" : ['Experiencia de 2 años en HTML']
         - "Valorable experiencia utilizando React" : ['Experiencia en React']
