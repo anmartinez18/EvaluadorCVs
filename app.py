@@ -52,7 +52,8 @@ def evaluate_cv(cv_file, oferta_file, cv_text, oferta_text):
             gr.update(visible=False),
             gr.update(visible=True),
             gr.update(visible=False),
-            gr.update(visible=True)
+            gr.update(visible=True),
+            gr.update(visible=False)
         ]
     
     elif resultado["not_found_requirements"]:
