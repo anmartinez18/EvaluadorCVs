@@ -9,7 +9,7 @@ model = get_model()
 class AnalisisRespuesta(BaseModel):
     value: bool = Field(description="True o false según la respuesta del modelo")
     
-
+    
 chat_template = """
 Eres un entrevistador técnico de una empresa, debes analizar las respuestas obtenidas de los usuarios sobre preguntas acerca de los requisitos que no aparecen en su CV.
 

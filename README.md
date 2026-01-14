@@ -19,33 +19,37 @@ Para el desarrollo del sistema se ha utilizado un LLM de Mistral, concretamente 
 
 En el carpeta 'src' existen los dos archivos necesarios para la configuración del llm: 
 
-- **"models.py"**: Aquí se añade o se modifica el modelo LLM que se utilizará.
+- **"src/models.py"**: Aquí se añade o se modifica el modelo LLM que se utilizará.
 
-- **".env"**: En este fichero se debe incluir la api_key necesaria para instanciar el modelo.
+- **"src/.env"**: En este fichero se debe incluir la api_key necesaria para instanciar el modelo.
 
 
- ## Ejemplo de uso
+## Ejemplo de uso
 
  ```shell
 
-# Situarse la siguiente ruta
+# 1. Situarse en la siguiente ruta
 cd EvaluadorCVs
 
-# 1. Instalar poetry (sino está ya instalado)
+# 2. Instalar poetry (si no está ya instalado)
 pip install poetry
 
-# 2. Configurar entorno de ejecución
+# 3. Configurar entorno de ejecución
 poetry lock
 poetry install
 
-# 3. Activar entorno
+# 4. Activar entorno
 .\.venv\Scripts\activate
 
-# 4. Lanzar la aplicación web con Gradio
+# 5. Añadir nuevas dependencias (si es necesario para otros LLMs)
+poetry add "dependencia"
+
+# 6. Lanzar la aplicación web con Gradio
 python app.py
 
 ```
+
 ## Aclaraciones
-- La applicación web servirá por defecto en la URL local: http://127.0.0.1:7860
-- El puerto se puede modificar desde el fichero app.py añadiendo la opción 'server_port=XXXX' en la última linea de código.
-- Para crear un enlace totalmente público añadir la opción 'shared=True'.
+- La applicación web servirá por defecto en la URL local: http://127.0.0.1:7862
+- El puerto se puede modificar desde el fichero app.py editando la opción 'server_port=XXXX' en la última linea de código.
+- Para crear un enlace totalmente público sustituir la opción 'shared=False' por 'shared=True'.

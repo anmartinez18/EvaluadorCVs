@@ -360,9 +360,5 @@ with gr.Blocks() as demo:
             finalizar_eval_btn
         ]
     )
-
-
-       
-demo.launch(theme=gr.themes.Base(), css=custom_css)
-
-#demo.launch(theme=gr.themes.Base(), css=custom_css, server_port=0000)
+  
+demo.launch(theme=gr.themes.Base(), css=custom_css, server_port=7862, shared=False)
