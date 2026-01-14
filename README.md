@@ -6,6 +6,8 @@ Este sistema implementa un pipeline basado en modelos llm para la evaluación de
 
 2. **Evaluación interactiva**: Si el candidato no ha sido descartado y existen requisitos no mencionados en el CV ("not_found_requirements"), que no sean obligatorios, el sistema realizará una breve entrevista al candidato y actualizará el resultado final en base a las respuestas proporcionadas. En caso contrario se finalizará la evaluación.
 
+El evaluador cuenta con una interfaz web interactiva para mejorar la experiencia del usuario. Está implementada con Gradio.
+
 ## Funcionalidades principales
 - Extracción automática de requisitos.
 - Búsqueda y análisis de evidencias en el CV para contrastar el cumplimiento de los requisitos.
@@ -28,23 +30,26 @@ En el carpeta 'src' existen los dos archivos necesarios para la configuración d
 
  ```shell
 
-# 1. Situarse en la siguiente ruta
+# 1. Situarse en la siguiente ruta.
 cd EvaluadorCVs
 
-# 2. Instalar poetry (si no está ya instalado)
+# 2. Instalar poetry (si no está ya instalado).
 pip install poetry
 
-# 3. Configurar entorno de ejecución
-poetry lock
+# 3. Configurar que el entorno de ejecución se cree dentro del proyecto (.venv).
+poetry config virtualenvs.in-project true
+
+# 4. Instalación de dependencias y creación del entorno.
 poetry install
 
-# 4. Activar entorno
+# 5. Activar entorno.
 .\.venv\Scripts\activate
 
-# 5. Añadir nuevas dependencias (si es necesario para otros LLMs)
+# 6. Añadir nuevas dependencias (si es necesario para otros LLMs).
 poetry add "dependencia"
+poetry lock # Actualizar lock al añadir nuevas dependencias
 
-# 6. Lanzar la aplicación web con Gradio
+# 7. Lanzar la aplicación web con Gradio dentro del entorno creado.
 python app.py
 
 ```
@@ -52,4 +57,4 @@ python app.py
 ## Aclaraciones
 - La applicación web servirá por defecto en la URL local: http://127.0.0.1:7862
 - El puerto se puede modificar desde el fichero app.py editando la opción 'server_port=XXXX' en la última linea de código.
-- Para crear un enlace totalmente público sustituir la opción 'shared=False' por 'shared=True'.
+- Para crear un enlace totalmente público sustituir la opción 'share=False' por 'share=True'.

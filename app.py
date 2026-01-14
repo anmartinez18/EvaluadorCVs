@@ -361,4 +361,4 @@ with gr.Blocks() as demo:
         ]
     )
   
-demo.launch(theme=gr.themes.Base(), css=custom_css, server_port=7862, shared=False)
+demo.launch(theme=gr.themes.Base(), css=custom_css, server_port=7862, share=False)
